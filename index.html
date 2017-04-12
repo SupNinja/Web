@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="css/index.css"/>
+</head>
+<body>
+<div id="dowebok">
+    <!-- 第一屏-->
+    <div class="section first">
+        <!--静态图-->
+        <div class="jt-pic">
+            <img src="images/yue.fw.png" alt=""/>
+            <img src="images/lou.fw.png" alt=""/>
+
+            <div class="stars">
+                <img src="images/star1.fw.png" alt=""/>
+                <img src="images/star2.fw.png" alt=""/>
+                <img src="images/star3.fw.png" alt=""/>
+                <img src="images/star4.fw.png" alt=""/>
+            </div>
+        </div>
+        <!--动态图-->
+        <div class="dt-pic">
+            <img src="images/wn.fw.png" alt=""/>
+        </div>
+
+        <!--信息-->
+        <div class="first-title">
+            <h3>个人简历</h3>
+        </div>
+        <div class="first-main">
+            <div class="first-text">
+                <p>姓名: 路飞</p>
+                <p>年龄: 18</p>
+                <p>专业: 国模郭沫若</p>
+                <p>爱好: 海贼王</p>
+                <p>电话: 18301020304</p>
+                <p>I want to say</p>
+            </div>
+        </div>
+        <div class="first-ppic"></div>
+    </div>
+    <!-- 第二屏-->
+    <div class="section second active">
+        <!--背景插图-->
+        <div class="weixing"></div>
+        <div class="yuhangyuan"></div>
+        <div class="star"></div>
+        <!-- 火箭 -->
+        <div class="huojian"></div>
+        <!--标题-->
+        <div class="second-title">
+            <h4>工作经历</h4>
+        </div>
+        <!--主体-->
+        <div class="second-info">
+            <p>2015年在XXXX公司XX岗位工作</p>
+            <p>2015年在XXXX公司XX岗位工作</p>
+            <p>2015年在XXXX公司XX岗位工作</p>
+            <p>2015年在XXXX公司XX岗位工作</p>
+        </div>
+    </div>
+    <!-- 第三屏-->
+    <div class="section third">
+        <!-- 背景插图 -->
+        <div class="third-wawa">
+            <!--娃娃-->
+            <img src="images/wawa1.fw.png" alt=""/>
+            <img src="images/wawa2.fw.png" alt=""/>
+            <img src="images/wawa3.fw.png" alt=""/>
+            <img src="images/wawa4.fw.png" alt=""/>
+            <img src="images/wawa5.fw.png" alt=""/>
+            <!--阴影-->
+            <img src="images/waway.fw.png" alt=""/>
+            <img src="images/waway.fw.png" alt=""/>
+            <img src="images/waway.fw.png" alt=""/>
+            <img src="images/waway.fw.png" alt=""/>
+            <img src="images/waway.fw.png" alt=""/>
+        </div>
+        <!--机械抓-->
+        <div class="third-anipic">
+            <img src="images/zhua0.fw.png" alt=""/>
+        </div>
+        <!--小孩-->
+        <div class="third-study">
+            <img src="images/xuexi.fw.png" alt=""/>
+        </div>
+        <div class="third-skills">
+            <h3>专业技能</h3>
+        </div>
+    </div>
+    <!-- 第四屏-->
+    <div class="section fourth">
+        <div class="fourth-bgc"></div>
+        <div class="fourth-title">
+            <span>自</span>
+            <span>我</span>
+            <span>评</span>
+            <span>价</span>
+        </div>
+        <div class="people">
+            <div class="peo peo1"></div>
+            <div class="peo peo2"></div>
+            <div class="peo peo3"></div>
+            <div class="peo peo4"></div>
+            <div class="peo peo5"></div>
+        </div>
+        <div class="fourth-plane">
+            <div class="plane plane1">
+                <span>我勤劳</span>
+            </div>
+            <div class="plane plane2">
+                <span>我肯求知</span>
+            </div>
+            <div class="plane plane3">
+                <span>我工作积极</span>
+            </div>
+            <div class="plane plane4">
+                <span>我待人热情</span>
+            </div>
+            <div class="plane plane5">
+                <span>我业绩优异</span>
+            </div>
+        </div>
+    </div>
+    <!-- 第五屏-->
+    <div class="section fifth">
+        <div class="animate">
+            <div class="ufo"></div>
+        </div>
+        <div class="info">
+            <div class="title">
+                <h3>请 联 系 我</h3>
+            </div>
+            <div class="content">
+                <h4>联系方式</h4>
+                <p>电话:18888888888</p>
+                <p>邮箱:1888@163.com</p>
+                <p>QQ:345515793</p>
+                <span><img src="images/1489758078.png" alt=""/></span>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.fullPage.min.js"></script>
+<script>
+    $(function () {
+        $('#dowebok').fullpage({
+            afterLoad: function (link, index) {
+                console.log(index);
+                $(".section").removeClass("current");
+                setTimeout(function () {
+                    $(".section").eq(index - 1).addClass("current");
+                }, 100);
+            }
+        })
+    })
+</script>
+</body>
+</html>

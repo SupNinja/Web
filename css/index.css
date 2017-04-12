@@ -1,0 +1,983 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body,html {
+    height: 100%;
+}
+.section{
+    overflow: hidden;
+    position: relative;
+}
+
+/*第一页*/
+
+/*背景*/
+.section.first{
+    background: url(../images/bgc1.png) no-repeat center -570px;
+    background-size: cover;
+}
+/*月亮*/
+.section.first .jt-pic img:nth-child(1){
+    position: absolute;
+    width: 200px;
+    right: 200px;
+    top: 50px;
+    right: 400px;
+}
+/*楼*/
+.section.first .jt-pic img:nth-child(2){
+    position: absolute;
+    width: 400px;
+    right: 180px;
+    bottom: 54px;
+}
+
+/*星星*/
+.section.first .jt-pic .stars img:nth-child(1){
+    position:absolute;
+    top: 32px;
+    right: 393px;
+    animation: shan 0.5s linear infinite alternate;
+}
+.section.first .stars img:nth-child(2){
+    position:absolute;
+    top: 32px;
+    right: 100px;
+    animation: shan 0.5s  linear infinite alternate;
+}
+.section.first .stars img:nth-child(3){
+    position:absolute;
+    top: 32px;
+    right: 568px;
+    animation: shan 0.5s  linear infinite alternate;
+}
+.section.first .stars img:nth-child(4){
+    position:absolute;
+    top: 32px;
+    left: 100px;
+    animation: shan 0.5s  linear infinite alternate;
+}
+/*女巫*/
+.section.first .dt-pic{
+    position: absolute;
+    right: 280px;
+    bottom: 130px;
+    transform: translateX(460px) translateY(-240px) rotateY(180deg);
+}
+.section.first.current .dt-pic {
+    animation: fly 8s linear forwards;
+}
+.section.first .dt-pic img{
+    width: 250px;
+}
+.section.first.current .dt-pic img {
+    width: 50px;
+    transition: width 3s 6s;
+}
+/*标题*/
+.first .first-title {
+    position: absolute;
+    top: 100px;
+    left: 380px;
+    width: 200px;
+    height: 100px;
+    text-align: center;
+    font: 700 30px/100px "Microsoft Yahei";
+    border-radius: 20px;
+    background: url(../images/c2761608b0aa52d7404e460978c08a2d.jpg);
+    background-size: cover;
+    transform-origin: center top;
+    transform: translateY(-200%);
+}
+.first.current .first-title {
+    transform: translateY(0);
+    transition: transform 1s;
+    animation: first_yao 2s 2.2s linear infinite;
+}
+.first .first-title::after {
+    content:"";
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 20px;
+    height: 20px;
+    background-image: radial-gradient(9px 9px,#fff,#000);
+    border-radius: 50%;
+    opacity: 0;
+}
+.first.current .first-title::after {
+    opacity: 1;
+    transition: opacity 0s 2.2s ;
+}
+
+/*主体部分*/
+.first-main {
+    position: absolute;
+    left: 250px;
+    bottom: 126px;
+    width: 450px;
+    height: 280px;
+    border-radius: 30px;
+    background: url(../images/c2761608b0aa52d7404e460978c08a2d.jpg);
+    background-size: cover;
+    box-sizing:border-box;
+    transform: translateX(-700px);
+}
+.first.current .first-main {
+    transform: translateX(0);
+    transition: transform 2.45s 4.4s linear;
+}
+/*头像*/
+.first .first-ppic {
+    position: absolute;
+    left: 830px;
+    top: 100px;
+    width: 0px;
+    height: 0px;
+    border-radius: 50%;
+    border: none;
+}
+.first.current .first-ppic{
+    width: 150px;
+    height: 200px;
+    border: 1px solid #000;
+    border-radius: 20px;
+    transform: translateX(-569px) translateY(184px) rotateZ(-1440deg);
+    transition: all 1.5s 6.5s linear;
+}
+.first-ppic::after{
+    content: '';
+    display: block;
+    height: 100%;
+    background:url(../images/1043452025-37.jpg) no-repeat center center;
+    background-size: contain;
+}
+
+/*介绍部分*/
+.first .first-text {
+    float: right;
+    width: 239px;
+    height: 236px;
+    line-height: 27px;
+    margin: 17px 11px 0 0;
+    padding: 5px 13px;
+    border: 1px solid #000;
+    border-radius: 10px;
+    background-color: #fff;
+    font-family: "Microsoft YaHei";
+    opacity: 0;
+    overflow: hidden;
+}
+.first.current .first-text {
+    opacity: 1;
+    transition: opacity 2s 8.4s ;
+}
+.first .first-text p:nth-child(6){
+    text-align: center;
+    font-weight: 700;
+}
+.first-text::after{
+    content: '';
+    display:block;
+    width: 100%;
+    height: 70px;
+    background: url(../images/worksay.png) no-repeat center center;
+    background-size: cover;
+    transform: scale(1.1);
+}
+
+/*第二屏*/
+
+/*背景插图*/
+.section.second {
+    background-image: linear-gradient(to top,#0F8A8C 10%,#0C737B 50%,#074559 80%,#074559 100%);
+}
+.second .weixing {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    right: 280px;
+    bottom: 165px;
+    background: url(../images/weixing.fw.png) no-repeat;
+    background-size: contain;
+}
+.second .star {
+    position: absolute;
+    width: 130px;
+    height: 130px;
+    left: 305px;
+    top: 165px;
+    background: url(../images/xx.fw.png) no-repeat;
+    background-size: contain;
+}
+.second .yuhangyuan {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    left: 100px;
+    top: 185px;
+    background: url(../images/yhy.fw.png) no-repeat;
+    background-size: contain;
+    transform-origin: center center;
+    opacity: 0;
+    transform: rotateZ(30deg);
+    animation: second_yao 5s 4.5s linear infinite;
+ }
+.second.current .yuhangyuan {
+    opacity:1;
+    left: 404px;
+    transition: left 3s 1.5s,opacity 1s 2s;
+}
+
+/*火箭*/
+.second .huojian {
+    position: absolute;
+    left: 70px;
+    bottom: 80px;
+    width: 130px;
+    height: 130px;
+    background: url(../images/huojian.png) no-repeat center center;
+    background-size: contain;
+}
+.second.current .huojian{
+    animation: second_move 8s forwards;
+}
+
+/*信息部分*/
+/*标题*/
+.second .second-title {
+    position: absolute;
+    width: 300px;
+    height: 150px;
+    left: 50%;
+    top: 20px;
+    text-align: center;
+    font: 700 50px/150px "Microsoft YaHei";
+    transform: translateX(-50%) scale(0);
+}
+.second.current .second-title {
+    opacity: 1;
+    transform: translateX(-50%) scale(1);
+    transition: transform  1s;
+}
+    /*经历*/
+.second .second-info {
+    position: absolute;
+    left: 50%;
+    top: 60%;
+    width: 500px;
+    text-align: center;
+    transform: translateX(-50%);
+    background-color: sandybrown;
+    border-radius: 20px;
+}
+.second .second-info p{
+    font: 700 24px/50px "Microsoft YaHei";
+    transform: translateY(500px)
+}
+.second.current .second-info p:nth-child(1){
+    transform: translateY(0px);
+    transition: transform 1s 1.5s;
+}
+.second.current .second-info p:nth-child(2){
+    transform: translateY(0px);
+    transition: transform 1s 3s;
+}
+.second.current .second-info p:nth-child(3){
+    transform: translateY(0px);
+    transition: transform 1s 4.5s ;
+}
+.second.current .second-info p:nth-child(4){
+    transform: translateY(0px);
+    transition: transform 1s 6s;
+}
+
+
+/*第三屏*/
+
+/*背景及插图*/
+.section.third{
+    background-color: #F5F1EA;
+}
+.third .third-wawa {
+    position: absolute;
+    left: 40%;
+    bottom: 100px;
+    transform: translateX(-48px);
+}
+.third .third-wawa img{
+    position: absolute;
+}
+.third .third-wawa img:nth-child(1){
+     left: -400px;
+     bottom: 0;
+ }
+.third .third-wawa img:nth-child(2){
+    left: -200px;
+    bottom: 0;
+}
+.third .third-wawa img:nth-child(3){
+    left: 0;
+    bottom: 0;
+}
+.third.current .third-wawa img:nth-child(3){
+    animation: third_move 8s linear forwards;
+}
+.third .third-wawa img:nth-child(4){
+    left: 200px;
+    bottom: 0;
+}
+.third .third-wawa img:nth-child(5){
+    left: 400px;
+    bottom: 0;
+}
+.third .third-wawa img:nth-child(6){
+    left: -394px;
+    bottom: -6px;
+}
+.third .third-wawa img:nth-child(7){
+    left: -194px;
+    bottom: -6px;
+}
+.third .third-wawa img:nth-child(8){
+    left: 6px;
+    bottom: -6px;
+    opacity: 1;
+}
+.third.current .third-wawa img:nth-child(8){
+    opacity: 0;
+    transition: opacity 3s 3.5s linear;
+}
+.third .third-wawa img:nth-child(9){
+    left: 206px;
+    bottom: -6px;
+}
+.third .third-wawa img:nth-child(10){
+    left: 406px;
+    bottom: -6px;
+}
+
+/*机械抓*/
+.third .third-anipic {
+    position: absolute;
+    left: 40%;
+    top: -300px;
+    transform:translateX(-73px) translateY(0px);
+}
+.third.current .third-anipic {
+    animation: third_zhua 8s linear forwards;
+}
+.third .third-anipic::before {
+    content: '';
+    position: absolute;
+    left:0;
+    bottom: 0;
+    width: 42px;
+    height: 89px;
+    background: url(../images/zhua1.fw.png) no-repeat;
+    transform-origin: 4px 6px;
+    transform: rotateZ(30deg);
+}
+.third.current .third-anipic::before {
+    animation: third_zhualeft 8s linear forwards;
+}
+.third .third-anipic::after {
+    content:"";
+    position: absolute;
+    right:0;
+    bottom: 0;
+    width: 42px;
+    height: 89px;
+    background: url(../images/zhua2.fw.png) no-repeat;
+    transform-origin: 27px 6px;
+    transform: rotateZ(-30deg);
+}
+.third.current .third-anipic::after {
+    animation: third_zhuaright 8s linear forwards;
+}
+.third .third-study {
+    position: absolute;
+    right: 86px;
+    bottom: 100px;
+}
+.third .third-study img{
+    width: 200px;
+}
+
+/*标题*/
+.third .third-skills {
+    width: 200px;
+    height: 100px;
+    text-align: center;
+    transform:translateX(-100%) translateY(100%);
+    opacity: 0;
+}
+.third.current .third-skills {
+    transform:translateX(70%) translateY(100%);
+    opacity: 1;
+    transition: transform 2s,opacity 1s 0.5s;
+}
+.third .third-skills h3 {
+    font: 700 40px/100px "Microsoft YaHei";
+    color: yellowgreen;
+}
+/*第四屏*/
+.section.fourth {
+    background-color: #978671;
+}
+.fourth .fourth-bgc {
+    position: absolute;
+    left: 70px;
+    top: 70px;
+    width: 150px;
+    height: 100px;
+    background: url(../images/p9.fw.png) no-repeat center center;
+    background-size: contain;
+}
+/*标题*/
+.fourth .fourth-title {
+    position: absolute;
+    left: 60%;
+    top: 10%;
+    font: 700 40px/60px "Microsoft YaHei";
+    color: #fff;
+}
+.fourth .fourth-title span{
+    display: block;
+    line-height: 60px;
+}
+/*人*/
+.fourth .people {
+    position: absolute;
+    width: 444px;
+    height: 444px;
+    left: 120px;
+    top: 124px;
+    perspective: 100px;
+    box-sizing: border-box;
+}
+
+.fourth .people .peo{
+    float: left;
+    width: 200px;
+    height: 200px;
+    margin: 10px;
+    border:1px solid #daa520;
+    border-radius: 10px;
+}
+.fourth .people .peo1{
+    background: url(../images/p2.fw.png) no-repeat center center;
+    transform: translateY(600px);
+
+}
+.fourth.current .people .peo1{
+    transform: translateY(0px);
+    transition: transform 1s;
+}
+.fourth .people .peo2{
+    background: url(../images/p3.fw.png) no-repeat center center;
+    transform: translateX(-600px);
+}
+.fourth.current .people .peo2{
+    transform: translateX(0px);
+    transition: transform 1s 2s;
+}
+.fourth .people .peo3{
+    background: url(../images/p4.fw.png) no-repeat center center;
+    transform: translateY(-600px);
+}
+.fourth.current .people .peo3{
+    transform: translateY(0px);
+    transition: transform 1s 4s;
+}
+.fourth .people .peo4{
+    background: url(../images/p8.fw.png) no-repeat center center;
+    background-size: contain;
+    opacity: 0;
+    transform: translateX(600px);
+}
+.fourth.current .people .peo4{
+    transform: translateX(0px);
+    opacity: 1;
+    transition: transform 1s 6s,opacity 1s 6s ;
+}
+.fourth .people .peo5{
+    position: absolute;
+    left: 111px;
+    top: 111px;
+    opacity: 0;
+    background: url(../images/p7.fw.png) no-repeat center center;
+    transform: translateZ(0px);
+}
+.fourth.current .people .peo5{
+    animation: fourth_big 1s 8s forwards;
+}
+/*评价*/
+.fourth .fourth-plane span{
+    float: right;
+    margin-right: 10%;
+    color: #fff;
+}
+/*飞机*/
+.fourth .fourth-plane .plane{
+    position: absolute;
+    transform: translateX(100%);
+}
+.fourth .fourth-plane .plane1 {
+    top: 50px;
+    right: 0;
+    width: 226px;
+    height: 115px;
+    font: 18px/115px "Microsoft YaHei";
+    background: url(../images/airplane1.fw.png) no-repeat;
+}
+.fourth.current .fourth-plane .plane1 {
+    transform: translateX(0);
+    transition: transform 1s 1s;
+}
+.fourth .fourth-plane .plane2 {
+    top: 170px;
+    right: 0;
+    width: 302px;
+    height: 82px;
+    font: 18px/82px "Microsoft YaHei";
+    background: url(../images/airplane2.fw.png) no-repeat;
+}
+.fourth.current .fourth-plane .plane2 {
+    transform: translateX(0);
+    transition: transform 1s 3s;
+}
+.fourth .fourth-plane .plane3 {
+    top: 257px;
+    right: 0;
+    width: 363px;
+    height: 109px;
+    font: 18px/109px "Microsoft YaHei";
+    background: url(../images/airplane3.fw.png) no-repeat;
+}
+.fourth.current .fourth-plane .plane3 {
+    transform: translateX(0);
+    transition: transform 1s 5s;
+}
+.fourth .fourth-plane .plane4 {
+    top: 371px;
+    right: 0;
+    width: 430px;
+    height: 114px;
+    font: 18px/114px "Microsoft YaHei";
+    background: url(../images/airplane4.fw.png) no-repeat;
+}
+.fourth.current .fourth-plane .plane4 {
+    transform: translateX(0);
+    transition: transform 1s 7s;
+}
+.fourth .fourth-plane .plane5 {
+    top: 490px;
+    right: 0;
+    width: 501px;
+    height: 103px;
+    font: 18px/103px "Microsoft YaHei";
+    background: url(../images/airplane5.fw.png) no-repeat;
+}
+.fourth.current .fourth-plane .plane5 {
+    transform: translateX(0);
+    transition: transform 1s 9s;
+}
+
+/*第五屏*/
+.section.fifth {
+    position: relative;
+    background-color: powderblue;
+}
+.fifth .info .title{
+    width: 500px;
+    margin: 100px auto 0;
+    text-align: center;
+
+}
+.fifth .info h3{
+    font: 700 40px/60px "Microsoft YaHei";
+    color: #daa520;
+    transform: translateX(-500px);
+    opacity: 0;
+}
+.fifth.current .info h3{
+    transform: translateY(0px);
+    opacity: 1;
+    transition: transform 3s 1.5s,opacity 1s 2s;
+}
+.fifth .info .content{
+    position: relative;
+    padding: 40px 0 0 30px;
+    width: 500px;
+    height: 300px;
+    border: 1px solid #000;
+    border-radius: 50px;
+    margin: 100px auto 0;
+    font: 700 22px/48px "Microsoft YaHei";
+    color: navy;
+    box-sizing: border-box;
+    background-color: yellowgreen;
+}
+.fifth .info .content h4{
+    font: 24px/50px "Microsoft YaHei";
+    color: darkred;
+}
+.fifth .info .content p {
+    transform: translateY(500px);
+}
+.fifth.current .info .content p:nth-child(2) {
+    transform: translateY(0px);
+    transition: transform 1s 4s;
+}
+.fifth.current .info .content p:nth-child(3) {
+    transform: translateY(0px);
+    transition: transform 1s 5s;
+}
+.fifth.current .info .content p:nth-child(4) {
+    transform: translateY(0px);
+    transition: transform 1s 6s;
+}
+
+.fifth .info .content span{
+    position: absolute;
+    right: 45px;
+    top: 75px;
+    width: 150px;
+    height: 150px;
+    opacity: 0;
+}
+.fifth.current .info .content span{
+    opacity: 1;
+    transition: opacity 1s 7s;
+    animation: fifth_ss 0.5s 8s 2 forwards;
+}
+.fifth .info .content img{
+    width: 100%;
+}
+.fifth .animate .ufo{
+    position: absolute;
+    left: 50px;
+    top: 50px;
+    width: 197px;
+    height: 152px;
+    background: url(../images/ufo.fw.png) no-repeat;
+    transform: translateY(-300px);
+}
+.fifth.current .animate .ufo{
+    animation: fifth_fly 8s forwards;
+}
+
+
+
+
+
+
+@keyframes fifth_fly {
+    0%{
+        height: 152px;
+        transform: rotateZ(0deg) translateX(0px) translateY(-200px);
+    }
+    20%{
+        height: 152px;
+        transform: rotateZ(0deg) translateX(0px) translateY(0px);
+    }
+    50%{
+        height: 200px;
+        transform: rotateZ(0deg) translateX(0px) translateY(0px);
+    }
+    80%{
+        height: 152px;
+        transform: rotateZ(0deg) translateX(0px) translateY(0px);
+    }
+    100%{
+        transform: rotateZ(-20deg) translateX(500px) translateY(-300px);
+    }
+
+}
+
+@keyframes fifth_ss {
+    0%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.1);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@keyframes fourth_big {
+    0%{
+        opacity: 0;
+        transform: translateZ(0px);
+    }
+    50%{
+        opacity: 1;
+        transform: translateZ(50px);
+
+    }
+    100%{
+        opacity: 1;
+        transform: translateZ(10px);
+    }
+
+}
+
+
+
+
+
+
+
+
+
+@keyframes third_move {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    35%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+    65%{
+        transform: translateY(-240px);
+        opacity: 1;
+    }
+    80%{
+        transform: translateY(-240px) translateX(630px);
+        opacity: 1;
+    }
+    100%{
+        transform: translateY(-50px) translateX(630px) scale(0.1);
+        opacity: 0;
+    }
+}
+@keyframes third_zhualeft {
+    0% {
+        transform: rotateZ(30deg);
+    }
+    30%{
+        transform: rotateZ(30deg);
+    }
+    35%{
+        transform: rotateZ(10deg);
+    }
+    65%{
+        transform: rotateZ(10deg);
+    }
+    80%{
+        transform: rotateZ(10deg);
+    }
+    85%{
+        transform: rotateZ(30deg);
+    }
+    100%{
+        transform: rotateZ(30deg);
+    }
+}
+@keyframes third_zhuaright {
+    0% {
+        transform: rotateZ(-30deg);
+    }
+    30%{
+        transform: rotateZ(-30deg);
+    }
+    35%{
+        transform: rotateZ(-10deg);
+    }
+    65%{
+        transform: rotateZ(-10deg);
+    }
+    80%{
+        transform: rotateZ(-10deg);
+    }
+    85%{
+        transform: rotateZ(-30deg);
+    }
+    100%{
+        transform: rotateZ(-30deg);
+    }
+}
+@keyframes third_zhua {
+    0%{
+        transform:translateX(-73px) translateY(0px);
+    }
+    30%{
+        transform:translateX(-73px) translateY(240px);
+    }
+    35%{
+        transform:translateX(-73px) translateY(240px);
+    }
+    65%{
+        transform:translateX(-73px) translateY(0px);
+    }
+    80%{
+        transform:translateX(557px) translateY(0px);
+    }
+    85%{
+        transform:translateX(557px) translateY(0px);
+    }
+    100%{
+        transform:translateX(-73px) translateY(0px);
+    }
+
+}
+
+@keyframes second_yao {
+    0%{
+        transform: translateX(-100px);
+    }
+    0%{
+        transform: rotateZ(30deg);
+    }
+    50%{
+        transform: rotateZ(20deg);
+    }
+    100%{
+        transform: rotateZ(30deg);
+    }
+}
+
+
+@keyframes first_yao {
+    0%{
+        transform: rotateZ(0deg);
+    }
+    25%{
+        transform: rotateZ(20deg);
+    }
+    75%{
+        transform: rotateZ(-20deg);
+    }
+    100%{
+        transform: rotateZ(0deg);
+    }
+}
+@keyframes second_move {
+    0%{
+        left: 70px;
+        bottom: 80px;
+        box-shadow: none;
+        transform: rotateZ(0deg);
+    }
+    5%{
+        left: 70px;
+        bottom: 80px;
+        box-shadow: 0px 30px 25px -19px red;
+        transform: rotateZ(0deg);
+    }
+    35%{
+        left: 70px;
+        bottom: 350px;
+        box-shadow: 0px 57px 25px -19px red;
+        transform: rotateZ(0deg);
+    }
+    45%{
+        left: 70px;
+        bottom: 350px;
+        box-shadow: 0px 57px 25px -19px red;
+        transform: rotateZ(-90deg);
+    }
+    50%{
+        left: -200px;
+        bottom: 350px;
+        box-shadow: 0px 57px 25px -19px red;
+        transform: rotateZ(-90deg);
+    }
+    51%{
+        left: -200px;
+        bottom: 690px;
+        box-shadow: 0px 57px 25px -19px red;
+        transform: rotateZ(0deg);
+    }
+    60%{
+        left: 70px;
+        bottom: 690px;
+        box-shadow: 0px 57px 25px -19px red;
+        transform: rotateZ(0deg);
+    }
+    95%{
+        left: 70px;
+        bottom: 80px;
+        box-shadow: 0px 57px 25px -19px red;
+        transform: rotateZ(0deg);
+    }
+    100%{
+        left: 70px;
+        bottom: 80px;
+        transform: rotateZ(0deg);
+        box-shadow: none;
+    }
+}
+
+
+
+@keyframes second_rev {
+    0%{
+        transform: rotateZ(0deg);
+    }
+    25%{
+        transform: rotateZ(-45deg);
+    }
+    50%{
+        transform: rotateZ(0deg);
+    }
+    75%{
+        transform: rotateZ(45deg);
+    }
+    100%{
+        transform: rotateZ(0deg);
+    }
+}
+@keyframes shan {
+    0%{
+        transform: scale(1,1);
+    }
+    100%{
+        transform: scale(1.05,1.05);
+    }
+}
+
+@keyframes fly {
+    0%{
+        transform: translateX(460px) translateY(-270px) rotateY(180deg);
+    }
+    44%{
+        transform: translateX(-1100px) translateY(-270px) rotateY(180deg);
+    }
+    45%{
+        transform: translateX(-1100px) translateY(0px) rotateY(0deg);
+    }
+    80%{
+        transform: translateX(-300px) translateY(0px) rotateY(0deg);
+    }
+    100%{
+        transform: translateX(0px) translateY(0px) rotateY(0deg);
+    }
+}
